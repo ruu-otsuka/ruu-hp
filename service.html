@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>清掃業｜店舗向けワイヤーフレーム</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* ワイヤーフレーム用の簡易スタイル（色は最小限、青系アクセント） */
+    .wf-placeholder { background:#f8f9fa; border:1px dashed #b0b0b0; }
+    .wf-box { min-height:120px; }
+    .hero { padding:72px 0; }
+    .section-pad { padding:56px 0; }
+    .sticky-cta { position: fixed; right: 16px; bottom: 16px; z-index: 1000; }
+  </style>
+</head>
+<body>
+  <!-- 固定ナビ（各ページへのリンク想定） -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#home">株式会社XXX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">トップ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">サービス</a></li>
+          <li class="nav-item"><a class="nav-link" href="#company">会社案内</a></li>
+          <li class="nav-item"><a class="nav-link" href="#recruit">採用情報</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- 2. サービス紹介（Services） -->
+    <section id="services" class="section-pad">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="h3 m-0">サービス紹介</h2>
+            <a href="#contact" class="btn btn-sm btn-primary">まずは見積もり</a>
+          </div>
+    
+          <!-- サービスカード群 -->
+          <div class="row g-3">
+            <!-- 各カードは詳細ページへの導線想定 -->
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="wf-placeholder rounded mb-3" style="height:120px;"></div>
+                  <h3 class="h5">日常清掃</h3>
+                  <p class="small text-muted">開店前・閉店後の定期巡回。床/トイレ/共用部など。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="wf-placeholder rounded mb-3" style="height:120px;"></div>
+                  <h3 class="h5">定期・スポット清掃</h3>
+                  <p class="small text-muted">ガラス/高所/什器裏/エアコン分解洗浄 など。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="wf-placeholder rounded mb-3" style="height:120px;"></div>
+                  <h3 class="h5">床洗浄・ワックス</h3>
+                  <p class="small text-muted">剥離/再ワックスで美観と耐久性を向上。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- 店舗別プラン -->
+          <div class="mt-5">
+            <h3 class="h5">店舗別プラン</h3>
+            <div class="row g-3">
+              <div class="col-md-4"><div class="p-3 border rounded">飲食店プラン（目安金額/頻度）</div></div>
+              <div class="col-md-4"><div class="p-3 border rounded">美容院プラン（目安金額/頻度）</div></div>
+              <div class="col-md-4"><div class="p-3 border rounded">小売店プラン（目安金額/頻度）</div></div>
+            </div>
+          </div>
+    
+          <!-- 作業手順/機材 -->
+          <div class="mt-5 row g-3">
+            <div class="col-md-6">
+              <h3 class="h5">作業手順（例）</h3>
+              <ol class="list-group list-group-numbered">
+                <li class="list-group-item">現地確認・ヒアリング</li>
+                <li class="list-group-item">プラン提案・お見積り</li>
+                <li class="list-group-item">作業実施（安全配慮・閉店後対応可）</li>
+                <li class="list-group-item">最終チェック・引き渡し</li>
+              </ol>
+            </div>
+            <div class="col-md-6">
+              <h3 class="h5">使用機材/洗剤（例）</h3>
+              <div class="wf-placeholder wf-box rounded d-flex align-items-center justify-content-center">機材写真/ロゴ等</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- フッター -->
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between small">
+      <div>© 2025 株式会社XXX</div>
+      <ul class="list-inline m-0">
+        <li class="list-inline-item"><a href="#company" class="link-secondary">会社概要</a></li>
+        <li class="list-inline-item"><a href="#recruit" class="link-secondary">採用情報</a></li>
+        <li class="list-inline-item"><a href="#contact" class="link-secondary">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </footer>

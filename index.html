@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>清掃業｜店舗向けワイヤーフレーム</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* ワイヤーフレーム用の簡易スタイル（色は最小限、青系アクセント） */
+    .wf-placeholder { background:#f8f9fa; border:1px dashed #b0b0b0; }
+    .wf-box { min-height:120px; }
+    .hero { padding:72px 0; }
+    .section-pad { padding:56px 0; }
+    .sticky-cta { position: fixed; right: 16px; bottom: 16px; z-index: 1000; }
+  </style>
+</head>
+<body>
+  <!-- 固定ナビ（各ページへのリンク想定） -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#home">株式会社XXX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">トップ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">サービス</a></li>
+          <li class="nav-item"><a class="nav-link" href="#company">会社案内</a></li>
+          <li class="nav-item"><a class="nav-link" href="#recruit">採用情報</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. トップページ（Home） -->
+  <header id="home" class="hero bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-6">
+          <h1 class="display-6 fw-bold">店舗の“清潔”が売上をつくる</h1>
+          <p class="lead">プロの清掃で第一印象を改善。飲食・美容・小売など店舗特化の清掃サービス。</p>
+          <div class="d-flex gap-2">
+            <a href="#contact" class="btn btn-primary">無料見積もり</a>
+            <a href="#services" class="btn btn-outline-primary">サービスを見る</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="wf-placeholder wf-box d-flex align-items-center justify-content-center rounded">メインビジュアル（作業風景 or Before/After）</div>
+        </div>
+      </div>
+
+      <!-- 信頼要素（実績・ロゴ・KPIなど） -->
+      <div class="row text-center mt-5 g-3">
+        <div class="col-6 col-md-3"><div class="p-3 border rounded">実績数 <br><span class="fs-4 fw-bold">###件/年</span></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded">対応エリア <br><span class="fs-4 fw-bold">〇〇市周辺</span></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded">店舗種別 <br><span class="fs-6">飲食/美容/小売 など</span></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded">最短対応 <br><span class="fs-6">当日〜翌日</span></div></div>
+      </div>
+
+      <!-- お客様の声（店舗向け訴求） -->
+      <div class="row mt-5 g-3">
+        <div class="col-md-4"><div class="p-3 wf-placeholder rounded">お客様の声（店舗名/写真）</div></div>
+        <div class="col-md-4"><div class="p-3 wf-placeholder rounded">お客様の声</div></div>
+        <div class="col-md-4"><div class="p-3 wf-placeholder rounded">お客様の声</div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- フッター -->
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between small">
+      <div>© 2025 株式会社XXX</div>
+      <ul class="list-inline m-0">
+        <li class="list-inline-item"><a href="#company" class="link-secondary">会社概要</a></li>
+        <li class="list-inline-item"><a href="#recruit" class="link-secondary">採用情報</a></li>
+        <li class="list-inline-item"><a href="#contact" class="link-secondary">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- 常時表示CTA -->
+  <div class="sticky-cta d-none d-md-block">
+    <a href="#contact" class="btn btn-primary btn-lg shadow">無料見積もり</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
