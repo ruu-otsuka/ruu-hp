@@ -1,113 +1,247 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>清掃業｜店舗向けワイヤーフレーム</title>
-  <!-- Bootstrap 5 CDN -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>採用情報｜株式会社Ruu</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* ワイヤーフレーム用の簡易スタイル（色は最小限、青系アクセント） */
-    .wf-placeholder { background:#f8f9fa; border:1px dashed #b0b0b0; }
-    .wf-box { min-height:120px; }
-    .hero { padding:72px 0; }
-    .section-pad { padding:56px 0; }
-    .sticky-cta { position: fixed; right: 16px; bottom: 16px; z-index: 1000; }
+    :root{ --brand:#2f9d59; --brand-deep:#228a4b; --border:#e6e6e6; --light:#f7faf8; }
+    .topbar{ font-size:.95rem; }
+    .tel{ color:var(--brand); font-weight:700; }
+    .nav-underline .nav-link{ color:#333; }
+    .nav-underline .nav-link.active{ color:var(--brand); border-bottom:3px solid var(--brand); }
+    .page-ttl{ padding:32px 0 12px; }
+    .hero {
+      position: relative; background:url('recruit-hero.jpg') center/cover no-repeat;
+      min-height:300px; border-top:1px solid var(--border);
+    }
+    .hero::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,.25); }
+    .hero-inner{ position:relative; z-index:1; color:#fff; padding:48px 0; text-align:center; }
+    .badge-point{ display:inline-block; background:var(--brand); color:#fff; font-weight:700; padding:.5rem 1.25rem; border-radius:.75rem; transform:translateY(-50%); }
+    .point-card{ border:0; overflow:hidden; border-radius:1rem; box-shadow:0 8px 24px rgba(0,0,0,.06); }
+    .step-box{ background:#fff; border:1px solid var(--border); border-radius:.4rem; padding:1rem; height:100%; }
+    .step-num{ font-weight:700; color:#999; letter-spacing:.04em; }
+    .flow-arrow{ color:var(--brand); font-size:1.4rem; }
+    .qa-q{ background:var(--brand); color:#fff; font-weight:700; border-radius:.35rem; padding:.15rem .5rem; display:inline-block; width:1.6rem; text-align:center; }
+    .qa-a{ background:#333; color:#fff; font-weight:700; border-radius:.35rem; padding:.15rem .5rem; display:inline-block; width:1.6rem; text-align:center; }
+    .qa-card{ border:1px solid var(--border); border-radius:.5rem; background:#fff; }
+    .btn-ghost{ border:2px solid var(--brand); color:var(--brand); }
+    .btn-ghost:hover{ background:var(--brand); color:#fff; }
+    footer{ background:#f6f6f6; }
+    .backtop{ width:40px;height:40px;border-radius:999px;background:#efefef;display:inline-flex;align-items:center;justify-content:center; }
   </style>
 </head>
 <body>
-  <!-- 固定ナビ（各ページへのリンク想定） -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+
+  <!-- Top -->
+  <div class="topbar border-bottom py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold" href="#">株式会社Ruu</a>
+      <div class="tel">TEL: <span class="fs-5">090-2353-8669</span></div>
+    </div>
+  </div>
+
+  <!-- Global Nav -->
+  <nav class="border-bottom">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#home">株式会社XXX</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#home">トップ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">サービス</a></li>
-          <li class="nav-item"><a class="nav-link" href="#company">会社案内</a></li>
-          <li class="nav-item"><a class="nav-link" href="#recruit">採用情報</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
-        </ul>
-      </div>
+      <ul class="nav nav-underline justify-content-center gap-3 py-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
+        <li class="nav-item"><a class="nav-link" href="company.html">会社案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">事業案内</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recruit.html">採用情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">ご相談・お問合せ</a></li>
+      </ul>
     </div>
   </nav>
 
+  <!-- Breadcrumb + Title -->
+  <header class="container page-ttl">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb small">
+        <li class="breadcrumb-item"><a href="#" class="text-decoration-none">ホーム</a></li>
+        <li class="breadcrumb-item active" aria-current="page">採用情報</li>
+      </ol>
+    </nav>
+    <h1 class="h3 text-center">採用情報</h1>
+  </header>
 
-  <!-- 4. 採用情報（Recruit） -->
-  <section id="recruit" class="section-pad">
-    <div class="container">
-      <div class="d-flex align-items-center justify-content-between mb-3">
-        <h2 class="h3 m-0">採用情報</h2>
-        <a href="#contact" class="btn btn-sm btn-primary">応募/問い合わせ</a>
-      </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h2 class="h4 fw-bold">採用情報</h2>
+      <p class="mb-0">当社では、社会貢献と自己成長に意欲的な方を求めています。</p>
+    </div>
+  </section>
 
-      <!-- 募集要項の枠 -->
-      <div class="row g-3">
-        <div class="col-md-6">
-          <div class="p-3 border rounded h-100">
-            <h3 class="h5">募集職種</h3>
-            <ul class="small m-0">
-              <li>清掃スタッフ（アルバイト/パート/正社員）</li>
-              <li>店舗巡回リーダー</li>
-            </ul>
-            <hr/>
-            <div class="row small">
-              <div class="col-6">勤務時間：シフト</div>
-              <div class="col-6">勤務地：〇〇市周辺</div>
-              <div class="col-6">給与：目安〇〇円〜</div>
-              <div class="col-6">福利厚生：各種保険 等</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="p-3 border rounded h-100">
-            <h3 class="h5">働く魅力</h3>
-            <ul class="small m-0">
-              <li>未経験歓迎 / 研修あり</li>
-              <li>直行直帰OK（案件による）</li>
-              <li>希望シフトで両立しやすい</li>
-            </ul>
-            <div class="wf-placeholder rounded mt-3" style="height:120px;">現場写真の仮置き</div>
+  <!-- Points -->
+  <section class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="text-center"><span class="badge-point">POINT 01</span></div>
+        <div class="card point-card">
+          <img src="recruit-point01.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">週2からの勤務から可能！</h5>
+            <p class="card-text small text-secondary">ライフスタイルに合わせて柔軟なシフトが組めます。</p>
           </div>
         </div>
       </div>
-
-      <!-- 1日の流れ / インタビュー（任意） -->
-      <div class="row g-3 mt-4">
-        <div class="col-md-6">
-          <div class="p-3 border rounded h-100">
-            <h3 class="h6">1日の流れ（例）</h3>
-            <ol class="small m-0">
-              <li>集合・準備</li>
-              <li>現場へ移動</li>
-              <li>清掃作業</li>
-              <li>確認・報告</li>
-            </ol>
+      <div class="col-md-4">
+        <div class="text-center"><span class="badge-point">POINT 02</span></div>
+        <div class="card point-card">
+          <img src="recruit-point02.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">清掃経験者は給与優遇！</h5>
+            <p class="card-text small text-secondary">経験・資格を正当に評価します。</p>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="p-3 border rounded h-100">
-            <h3 class="h6">スタッフの声</h3>
-            <div class="wf-placeholder rounded" style="height:120px;">コメント/写真</div>
+      </div>
+      <div class="col-md-4">
+        <div class="text-center"><span class="badge-point">POINT 03</span></div>
+        <div class="card point-card">
+          <img src="recruit-point03.jpg" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">やる気次第で昇給チャンス！</h5>
+            <p class="card-text small text-secondary">評価制度で頑張りを反映します。</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Flow -->
+<section class="container pb-5">
+    <div class="mb-3 fw-bold border-start border-4 ps-2 border-success">採用の流れ</div>
+  
+    <div class="text-center">
+      <div class="p-3 mb-2 border rounded bg-white">
+        <div class="fw-bold">STEP 1　エントリー</div>
+        <p class="small mb-0">応募フォームまたは求人サイトよりご応募ください。</p>
+      </div>
+      <div class="my-2 text-success fw-bold">▼</div>
+  
+      <div class="p-3 mb-2 border rounded bg-white">
+        <div class="fw-bold">STEP 2　書類選考</div>
+        <p class="small mb-0">提出いただいた書類を確認の上、通過者へ次のご案内をいたします。</p>
+      </div>
+      <div class="my-2 text-success fw-bold">▼</div>
+  
+      <div class="p-3 mb-2 border rounded bg-white">
+        <div class="fw-bold">STEP 3　面接</div>
+        <p class="small mb-0">面接日程や会場はご相談の上で決定します。</p>
+      </div>
+      <div class="my-2 text-success fw-bold">▼</div>
+  
+      <div class="p-3 border rounded bg-white">
+        <div class="fw-bold">STEP 4　内定</div>
+        <p class="small mb-0">入社時期などはご相談の上で決定します。</p>
+      </div>
+    </div>
+  </section>
   
 
+  <!-- FAQ -->
+  <section class="container pb-4">
+    <div class="mb-3 fw-bold border-start border-4 ps-2 border-success">よくある質問</div>
 
-  <!-- フッター -->
-  <footer class="py-4 border-top">
-    <div class="container d-flex flex-column flex-md-row justify-content-between small">
-      <div>© 2025 株式会社XXX</div>
-      <ul class="list-inline m-0">
-        <li class="list-inline-item"><a href="#company" class="link-secondary">会社概要</a></li>
-        <li class="list-inline-item"><a href="#recruit" class="link-secondary">採用情報</a></li>
-        <li class="list-inline-item"><a href="#contact" class="link-secondary">お問い合わせ</a></li>
-      </ul>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="qa-card p-3">
+          <div class="d-flex gap-2 align-items-start">
+            <span class="qa-q">Q</span>
+            <div class="fw-bold">入社前に取得しておいた方が良い資格はありますか？</div>
+          </div>
+          <div class="d-flex gap-2 align-items-start mt-2">
+            <span class="qa-a">A</span>
+            <div class="text-secondary small">必須はありません。必要な資格がある場合は入社後に取得を支援します。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="qa-card p-3">
+          <div class="d-flex gap-2 align-items-start">
+            <span class="qa-q">Q</span>
+            <div class="fw-bold">職場の雰囲気はどうですか？</div>
+          </div>
+          <div class="d-flex gap-2 align-items-start mt-2">
+            <span class="qa-a">A</span>
+            <div class="text-secondary small">落ち着いた雰囲気で、相談しやすい現場です。初めての方にも丁寧にサポートします。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="qa-card p-3">
+          <div class="d-flex gap-2 align-items-start">
+            <span class="qa-q">Q</span>
+            <div class="fw-bold">シフトの希望は出せますか？</div>
+          </div>
+          <div class="d-flex gap-2 align-items-start mt-2">
+            <span class="qa-a">A</span>
+            <div class="text-secondary small">出せます。面接時に希望曜日や時間帯をお知らせください。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="qa-card p-3">
+          <div class="d-flex gap-2 align-items-start">
+            <span class="qa-q">Q</span>
+            <div class="fw-bold">社員登用はありますか？</div>
+          </div>
+          <div class="d-flex gap-2 align-items-start mt-2">
+            <span class="qa-a">A</span>
+            <div class="text-secondary small">あります。ご本人の希望と評価に応じて登用の機会があります。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="qa-card p-3">
+          <div class="d-flex gap-2 align-items-start">
+            <span class="qa-q">Q</span>
+            <div class="fw-bold">入社時期は相談できますか？</div>
+          </div>
+          <div class="d-flex gap-2 align-items-start mt-2">
+            <span class="qa-a">A</span>
+            <div class="text-secondary small">相談可能です。現職の都合などに合わせて調整します。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container pb-5">
+    <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+      <a href="#" class="btn btn-success rounded-pill px-4">
+        応募要項はこちら
+      </a>
+      <a href="mailto:Ruu.corporation@gmail.com" class="btn btn-ghost rounded-pill px-4">
+        採用に関するお問合せはこちら
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-4 pb-5">
+    <div class="container">
+      <div class="text-center mb-3">
+        <a href="#" class="backtop"><span class="small">↑</span></a>
+      </div>
+      <div class="d-flex justify-content-center gap-2 small mb-2">
+        <a href="#" class="link-secondary text-decoration-none">ホーム</a><span>・</span>
+        <a href="#" class="link-secondary text-decoration-none">会社案内</a><span>・</span>
+        <a href="#" class="link-secondary text-decoration-none">事業案内</a><span>・</span>
+        <a href="#" class="link-secondary text-decoration-none">採用情報</a><span>・</span>
+        <a href="#" class="link-secondary text-decoration-none">お問合せ</a>
+      </div>
+      <p class="text-center text-secondary small mb-0">Copyright (c) 2025 株式会社Ruu All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

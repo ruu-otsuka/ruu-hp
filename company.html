@@ -1,99 +1,138 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>清掃業｜店舗向けワイヤーフレーム</title>
-  <!-- Bootstrap 5 CDN -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>会社概要｜株式会社Ruu</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* ワイヤーフレーム用の簡易スタイル（色は最小限、青系アクセント） */
-    .wf-placeholder { background:#f8f9fa; border:1px dashed #b0b0b0; }
-    .wf-box { min-height:120px; }
-    .hero { padding:72px 0; }
-    .section-pad { padding:56px 0; }
-    .sticky-cta { position: fixed; right: 16px; bottom: 16px; z-index: 1000; }
+    :root { --brand:#2f9d59; --brand-light:#e9f6ee; }
+    .topbar { font-size:.95rem; }
+    .tel { color:var(--brand); font-weight:700; }
+    .nav-underline .nav-link{ color:#333; }
+    .nav-underline .nav-link.active{ color:var(--brand); border-bottom:3px solid var(--brand); }
+    .page-ttl{ padding:40px 0 12px; }
+    .section { padding:24px 0 40px; }
+    .heading-bar{
+      font-weight:700; background:#fff; border:1px solid #e5e5e5; padding:.75rem 1rem;
+      border-left:6px solid var(--brand); border-radius:.25rem;
+    }
+    .lead-sub{ font-weight:700; font-size:1.05rem; }
+    .table-company th{ width:140px; background:var(--brand-light); font-weight:600; }
+    .footer-mini a{ color:#666; text-decoration:none; }
+    .backtop{ width:40px;height:40px;border-radius:999px;background:#efefef;display:inline-flex;align-items:center;justify-content:center; }
   </style>
 </head>
 <body>
-  <!-- 固定ナビ（各ページへのリンク想定） -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+
+  <!-- ヘッダ -->
+  <div class="topbar border-bottom py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold" href="#">株式会社Ruu</a>
+      <div class="tel">TEL: <span class="fs-5">090-2353-8669</span></div>
+    </div>
+  </div>
+
+  <!-- グローバルナビ -->
+  <nav class="border-bottom">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#home">株式会社XXX</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#home">トップ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">サービス</a></li>
-          <li class="nav-item"><a class="nav-link" href="#company">会社案内</a></li>
-          <li class="nav-item"><a class="nav-link" href="#recruit">採用情報</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
-        </ul>
-      </div>
+      <ul class="nav nav-underline justify-content-center gap-3 py-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
+        <li class="nav-item"><a class="nav-link active" href="company.html">会社案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">事業案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="recruit.html">採用情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">ご相談・お問合せ</a></li>
+      </ul>
     </div>
   </nav>
 
+  <!-- パンくず & タイトル -->
+  <header class="container page-ttl">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb small">
+        <li class="breadcrumb-item"><a href="#" class="text-decoration-none">ホーム</a></li>
+        <li class="breadcrumb-item active" aria-current="page">会社案内</li>
+      </ol>
+    </nav>
+    <h1 class="h3 text-center">会社概要</h1>
+  </header>
 
-  <!-- 3. 会社案内（Company） / 社長紹介含む -->
-  <section id="company" class="section-pad bg-light">
-    <div class="container">
-      <h2 class="h3">会社案内</h2>
-      <div class="row g-4 align-items-start mt-1">
-        <div class="col-md-4">
-          <div class="wf-placeholder rounded mb-2" style="height:240px;"></div>
-          <p class="small text-muted">※社長写真の仮置き</p>
-        </div>
-        <div class="col-md-8">
-          <h3 class="h5">代表メッセージ</h3>
-          <p>「なぜ清掃業なのか」「店舗に特化する理由」「大切にしている価値」などを短文で。</p>
-          <div class="row g-3 mt-2">
-            <div class="col-sm-6">
-              <div class="p-3 border rounded">
-                <div class="small text-muted">会社概要</div>
-                <ul class="m-0 small">
-                  <li>社名 / 所在地</li>
-                  <li>設立 / 代表者</li>
-                  <li>事業内容：清掃業（店舗特化）</li>
-                  <li>許認可 / 加入保険 など</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="p-3 border rounded">
-                <div class="small text-muted">取り組み</div>
-                <ul class="m-0 small">
-                  <li>安全衛生/店舗営業配慮</li>
-                  <li>環境配慮/SDGs</li>
-                  <li>クレーム即応体制</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- スタッフ紹介（任意） -->
-      <div class="row g-3 mt-4">
-        <!-- <div class="col-md-3"><div class="wf-placeholder wf-box rounded">スタッフ1</div></div>
-        <div class="col-md-3"><div class="wf-placeholder wf-box rounded">スタッフ2</div></div>
-        <div class="col-md-3"><div class="wf-placeholder wf-box rounded">スタッフ3</div></div>
-        <div class="col-md-3"><div class="wf-placeholder wf-box rounded">スタッフ4</div></div> -->
-      </div>
+  <!-- ご挨拶 -->
+  <section class="container section">
+    <div class="heading-bar mb-3">ご挨拶</div>
+    <h2 class="lead-sub mb-2">快適な環境づくりを目指して</h2>
+    <div class="border p-3 bg-light">
+      <p class="mb-0">
+        株式会社Ruuは、店舗・オフィスをはじめ多様な現場における清掃請負業を中心に、
+        広告代理店業、遺品整理業、リサイクル業、そして整形外科・美容クリニック領域のコンサルティングまで
+        ワンストップで支援しています。お客様の課題に対し「安全」「衛生的」「快適」を基本とし、
+        現場配慮とスピード感ある対応でご期待にお応えします。
+      </p>
     </div>
   </section>
-  
 
+  <!-- 会社概要テーブル -->
+  <section class="container section">
+    <div class="heading-bar mb-3">会社概要</div>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle table-company bg-white">
+        <tbody>
+          <tr>
+            <th>会社名</th>
+            <td>株式会社Ruu</td>
+          </tr>
+          <tr>
+            <th>代表者名</th>
+            <td>田中秀典</td>
+          </tr>
+          <tr>
+            <th>所在地</th>
+            <td>〒611-0002　京都府宇治市木幡熊小路１９番地１５４</td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td><a class="tel text-decoration-none" href="tel:09023538669">090-2353-8669</a></td>
+          </tr>
+          <tr>
+            <th>メール</th>
+            <td><a href="mailto:Ruu.corporation@gmail.com">Ruu.corporation@gmail.com</a></td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>
+              <ul class="mb-0">
+                <li>広告代理店業</li>
+                <li>遺品整理業</li>
+                <li>リサイクル業</li>
+                <li>清掃請負業</li>
+                <li>コンサルティング業（整形外科クリニック・美容クリニック）</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <!-- フッター -->
-  <footer class="py-4 border-top">
-    <div class="container d-flex flex-column flex-md-row justify-content-between small">
-      <div>© 2025 株式会社XXX</div>
-      <ul class="list-inline m-0">
-        <li class="list-inline-item"><a href="#company" class="link-secondary">会社概要</a></li>
-        <li class="list-inline-item"><a href="#recruit" class="link-secondary">採用情報</a></li>
-        <li class="list-inline-item"><a href="#contact" class="link-secondary">お問い合わせ</a></li>
-      </ul>
+  <footer class="pt-4 pb-5 border-top">
+    <div class="container">
+      <div class="text-center mb-3">
+        <a href="#" class="backtop"><span class="small">↑</span></a>
+      </div>
+      <div class="d-flex justify-content-center gap-3 mb-2 footer-mini small">
+        <a href="#">ホーム</a><span>・</span>
+        <a href="#">会社案内</a><span>・</span>
+        <a href="#">事業案内</a><span>・</span>
+        <a href="#">採用情報</a><span>・</span>
+        <a href="#">お問合せ</a>
+      </div>
+      <p class="text-center text-secondary small mb-0">
+        Copyright (c) 2025 株式会社Ruu All Rights Reserved.
+      </p>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,117 +1,157 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>清掃業｜店舗向けワイヤーフレーム</title>
-  <!-- Bootstrap 5 CDN -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>事業案内｜株式会社Ruu</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* ワイヤーフレーム用の簡易スタイル（色は最小限、青系アクセント） */
-    .wf-placeholder { background:#f8f9fa; border:1px dashed #b0b0b0; }
-    .wf-box { min-height:120px; }
-    .hero { padding:72px 0; }
-    .section-pad { padding:56px 0; }
-    .sticky-cta { position: fixed; right: 16px; bottom: 16px; z-index: 1000; }
+    :root{ --brand:#2f9d59; --brand2:#228a4b; --border:#e6e6e6; --light:#f8fbf9; }
+    .topbar{ font-size:.95rem; }
+    .tel{ color:var(--brand); font-weight:700; }
+    .nav-underline .nav-link{ color:#333; }
+    .nav-underline .nav-link.active{ color:var(--brand); border-bottom:3px solid var(--brand); }
+    .page-ttl{ padding:32px 0 12px; }
+    .band-head{
+      background:#efefef; border-left:8px solid var(--brand2);
+      padding:.75rem 1rem; border-radius:.25rem;
+    }
+    .band-green{ background:var(--brand); color:#fff; padding:.6rem 1rem; border-radius:.25rem; font-weight:700; }
+    .service-lead{ line-height:1.9; }
+    .thumb{ border-radius:.25rem; object-fit:cover; width:100%; height:200px; }
+    footer{ background:#f6f6f6; }
+    .backtop{ width:40px;height:40px;border-radius:999px;background:#efefef;display:inline-flex;align-items:center;justify-content:center; }
+    @media (min-width: 992px){ .thumb{ height:220px; } }
   </style>
 </head>
 <body>
-  <!-- 固定ナビ（各ページへのリンク想定） -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+
+  <!-- Top -->
+  <div class="topbar border-bottom py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand fw-bold" href="#">株式会社Ruu</a>
+      <div class="tel">TEL: <span class="fs-5">090-2353-8669</span></div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="border-bottom">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#home">株式会社XXX</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">トップ</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">サービス</a></li>
-          <li class="nav-item"><a class="nav-link" href="company.html">会社案内</a></li>
-          <li class="nav-item"><a class="nav-link" href="recruit.html">採用情報</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </div>
+      <ul class="nav nav-underline justify-content-center gap-3 py-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">ホーム</a></li>
+        <li class="nav-item"><a class="nav-link" href="company.html">会社案内</a></li>
+        <li class="nav-item"><a class="nav-link active" href="service.html">事業案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="recruit.html">採用情報</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">ご相談・お問合せ</a></li>
+      </ul>
     </div>
   </nav>
 
-    <!-- 2. サービス紹介（Services） -->
-    <section id="services" class="section-pad">
-        <div class="container">
-          <div class="d-flex align-items-center justify-content-between mb-3">
-            <h2 class="h3 m-0">サービス紹介</h2>
-            <a href="#contact" class="btn btn-sm btn-primary">まずは見積もり</a>
-          </div>
-    
-          <!-- サービスカード群 -->
-          <div class="row g-3">
-            <!-- 各カードは詳細ページへの導線想定 -->
-            <div class="col-md-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="wf-placeholder rounded mb-3" style="height:120px;"></div>
-                  <h3 class="h5">日常清掃</h3>
-                  <p class="small text-muted">開店前・閉店後の定期巡回。床/トイレ/共用部など。</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="wf-placeholder rounded mb-3" style="height:120px;"></div>
-                  <h3 class="h5">定期・スポット清掃</h3>
-                  <p class="small text-muted">ガラス/高所/什器裏/エアコン分解洗浄 など。</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="wf-placeholder rounded mb-3" style="height:120px;"></div>
-                  <h3 class="h5">床洗浄・ワックス</h3>
-                  <p class="small text-muted">剥離/再ワックスで美観と耐久性を向上。</p>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- 店舗別プラン -->
-          <div class="mt-5">
-            <h3 class="h5">店舗別プラン</h3>
-            <div class="row g-3">
-              <div class="col-md-4"><div class="p-3 border rounded">飲食店プラン（目安金額/頻度）</div></div>
-              <div class="col-md-4"><div class="p-3 border rounded">美容院プラン（目安金額/頻度）</div></div>
-              <div class="col-md-4"><div class="p-3 border rounded">小売店プラン（目安金額/頻度）</div></div>
-            </div>
-          </div>
-    
-          <!-- 作業手順/機材 -->
-          <div class="mt-5 row g-3">
-            <div class="col-md-6">
-              <h3 class="h5">作業手順（例）</h3>
-              <ol class="list-group list-group-numbered">
-                <li class="list-group-item">現地確認・ヒアリング</li>
-                <li class="list-group-item">プラン提案・お見積り</li>
-                <li class="list-group-item">作業実施（安全配慮・閉店後対応可）</li>
-                <li class="list-group-item">最終チェック・引き渡し</li>
-              </ol>
-            </div>
-            <div class="col-md-6">
-              <h3 class="h5">使用機材/洗剤（例）</h3>
-              <div class="wf-placeholder wf-box rounded d-flex align-items-center justify-content-center">機材写真/ロゴ等</div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- Breadcrumb + Title -->
+  <header class="container page-ttl">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb small">
+        <li class="breadcrumb-item"><a href="#" class="text-decoration-none">ホーム</a></li>
+        <li class="breadcrumb-item active" aria-current="page">事業案内</li>
+      </ol>
+    </nav>
+    <h1 class="h3 text-center">事業案内</h1>
+  </header>
 
-  <!-- フッター -->
-  <footer class="py-4 border-top">
-    <div class="container d-flex flex-column flex-md-row justify-content-between small">
-      <div>© 2025 株式会社XXX</div>
-      <ul class="list-inline m-0">
-        <li class="list-inline-item"><a href="#company" class="link-secondary">会社概要</a></li>
-        <li class="list-inline-item"><a href="#recruit" class="link-secondary">採用情報</a></li>
-        <li class="list-inline-item"><a href="#contact" class="link-secondary">お問い合わせ</a></li>
+  <!-- 清掃業務 -->
+  <section class="container pb-4">
+    <div class="band-head mb-3 fw-bold">清掃業務</div>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <div class="border p-3 bg-white">
+          <p class="mb-2 service-lead">
+            材質や状況に応じた清掃を行うことで、衛生環境や美観を維持・向上させるとともに、建築物の耐用年数の長期化を進めます。<br>
+            清掃要員は、技術研修やマナー研修で作業スキルやホスピタリティを向上させます。
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <img src="service-clean.jpg" alt="清掃業務" class="thumb">
+      </div>
+    </div>
+
+    <!-- サービス例 -->
+    <div class="band-green mt-4 mb-3">サービス例</div>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="mb-3">
+          <li>ガラス清掃</li>
+          <li>ロープ作業</li>
+          <li>ゴンドラ作業</li>
+          <li>スカイマスター作業</li>
+          <li>床面清掃（洗浄・ワックス・剥離）</li>
+          <li>病院清掃</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul class="mb-3">
+          <li>フィルター清掃</li>
+          <li>一軒家清掃</li>
+          <li>マンション定期清掃</li>
+          <li>外壁美装</li>
+          <li>貯水槽清掃</li>
+          <li>高架水槽清掃</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ハウスクリーニング -->
+  <section class="container pb-5">
+    <div class="band-head mb-3 fw-bold">ハウスクリーニング</div>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <div class="border p-3 bg-white">
+          <p class="mb-0 service-lead">
+            キッチン、浴室、トイレ、ガラス・サッシ・網戸などご要望箇所を、プロが仕上げるサービスです。<br>
+            キッチンの油汚れ、水まわりのカビとり、除菌までプロの技術でお掃除します。季節・年末の大掃除、引っ越し、新築・改装時など、忙しいときにおすすめです。
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <img src="service-house.jpg" alt="ハウスクリーニング" class="thumb">
+      </div>
+    </div>
+  </section>
+
+   <!-- その他事業 -->
+   <section class="container pb-5">
+    <div class="band-head mb-3 fw-bold">その他事業</div>
+    <div class="border p-3 bg-white">
+      <ul class="mb-0">
+        <li>広告代理店業</li>
+        <li>遺品整理業</li>
+        <li>リサイクル業</li>
+        <li>清掃請負業</li>
+        <li>コンサル業（整形外科クリニック・美容クリニック）</li>
       </ul>
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-4 pb-5">
+    <div class="container">
+      <div class="text-center mb-3">
+        <a href="#" class="backtop"><span class="small">↑</span></a>
+      </div>
+      <div class="d-flex justify-content-center gap-2 small mb-2">
+        <a href="#" class="link-secondary text-decoration-none">ホーム</a><span>・</span>
+        <a href="#" class="link-secondary text-decoration-none">会社案内</a><span>・</span>
+        <a href="#" class="link-secondary text-decoration-none">事業案内</a><span>・</span>
+        <a href="#" class="link-secondary text-decoration-none">採用情報</a><span>・</span>
+        <a href="mailto:Ruu.corporation@gmail.com" class="link-secondary text-decoration-none">お問合せ</a>
+      </div>
+      <p class="text-center text-secondary small mb-0">
+        Copyright (c) 2025 株式会社Ruu All Rights Reserved.
+      </p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
