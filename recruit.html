@@ -78,44 +78,53 @@
         <li class="breadcrumb-item active" aria-current="page">採用情報</li>
       </ol>
     </nav>
-    <h1 class="h3 text-center">採用情報</h1>
+    <!-- <h1 class="h3 text-center">採用情報</h1> -->
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <style>
-      .hero {
-        background-image: url('saiyo.jpg');
-        background-size: cover;        /* 横幅いっぱいに拡大（縦横比維持） */
-        background-position: center;   /* 中央配置 */
-        background-repeat: no-repeat;
-
-        /* レイアウト調整 */
-        width: 100%;
-        min-height: 400px;             /* 高さは任意に */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: #fff;
+  <style>
+    .site-header {
+        /* 横方向グラデーション：左から右へ */
+        background: linear-gradient(90deg, #0957cd 0%, #3c86f6 100%);
+        color: #fff;              /* 文字色は白 */
       }
 
-    </style>
-    <div class="container hero">
-      <h2 class="h4 fw-bold">採用情報</h2>
-      <p class="mb-0">当社では、自己成長に意欲的な方を求めています。</p>
+      .site-header h1 {
+        margin-bottom: 0.5rem;
+      }
+
+      .site-header p {
+        color: #fff;
+        margin-bottom: 0;
+      }
+  </style>
+  <header class="site-header">
+    <div class="container text-center py-5">
+      <h1 class="display-5 fw-bold text-white mb-2">採用情報</h1>
+      <p class="lead mb-0">
+        当社では、自己成長に意欲的な方を求めています。
+      </p>
     </div>
-  </section>
+  </header>
+
 
   <section></section>
 
   <!-- Points -->
   <section class="container py-5">
+    <style>
+      .point-card .card-img-top {
+        height: 220px;          /* お好みの高さに統一 */
+        object-fit: cover;      /* アスペクト比を保ったままトリミング */
+        width: 100%;            /* 横幅いっぱい */
+        display: block;
+      }
+    </style>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="text-center"><span class="badge-point">POINT 01</span></div>
         <div class="card point-card">
-          <img src="recruit-point01.jpg" class="card-img-top" alt="">
+          <img src="img-1.jpg" class="card-img-top" alt="">
           <div class="card-body">
             <h5 class="card-title">フルタイム勤務絶賛募集！</h5>
             <p class="card-text small text-secondary">常勤、非常勤どちらも募集！ライフスタイルに合わせて柔軟なシフトが組めます。</p>
@@ -125,7 +134,7 @@
       <div class="col-md-4">
         <div class="text-center"><span class="badge-point">POINT 02</span></div>
         <div class="card point-card">
-          <img src="recruit-point02.jpg" class="card-img-top" alt="">
+          <img src="img-2.jpg" class="card-img-top" alt="">
           <div class="card-body">
             <h5 class="card-title">清掃経験者は給与優遇！</h5>
             <p class="card-text small text-secondary">経験・資格を正当に評価します。</p>
@@ -135,7 +144,7 @@
       <div class="col-md-4">
         <div class="text-center"><span class="badge-point">POINT 03</span></div>
         <div class="card point-card">
-          <img src="recruit-point03.jpg" class="card-img-top" alt="">
+          <img src="img-3.jpg" class="card-img-top" alt="">
           <div class="card-body">
             <h5 class="card-title">明確な評価制度で給与UPが狙える！</h5>
             <p class="card-text small text-secondary">明確な評価制度で頑張りを給与にしっかり反映。</p>
