@@ -6,7 +6,7 @@
   <title>採用情報｜株式会社Ruu</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    :root{ --brand:#2f9d59; --brand-deep:#228a4b; --border:#e6e6e6; --light:#f7faf8; }
+    :root{ --brand:#0957cd; --brand-deep:#3c86f6; --border:#e6e6e6; --light:#f7faf8; }
     .topbar{ font-size:.95rem; }
     .tel{ color:var(--brand); font-weight:700; }
     .nav-underline .nav-link{ color:#333; }
@@ -18,6 +18,7 @@
     }
     .hero::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,.25); }
     .hero-inner{ position:relative; z-index:1; color:#fff; padding:48px 0; text-align:center; }
+
     .badge-point{ display:inline-block; background:var(--brand); color:#fff; font-weight:700; padding:.5rem 1.25rem; border-radius:.75rem; transform:translateY(-50%); }
     .point-card{ border:0; overflow:hidden; border-radius:1rem; box-shadow:0 8px 24px rgba(0,0,0,.06); }
     .step-box{ background:#fff; border:1px solid var(--border); border-radius:.4rem; padding:1rem; height:100%; }
@@ -28,17 +29,31 @@
     .qa-card{ border:1px solid var(--border); border-radius:.5rem; background:#fff; }
     .btn-ghost{ border:2px solid var(--brand); color:var(--brand); }
     .btn-ghost:hover{ background:var(--brand); color:#fff; }
+
+    /* 追加：ブランド用ユーティリティ（Bootstrapのsuccess相当を置換） */
+    .border-brand{ border-color:var(--brand)!important; }
+    .text-brand{ color:var(--brand)!important; }
+    .btn-brand{ background:var(--brand); color:#fff; border:1px solid var(--brand); }
+    .btn-brand:hover{ background:var(--brand-deep); border-color:var(--brand-deep); color:#fff; }
+
     footer{ background:#f6f6f6; }
     .backtop{ width:40px;height:40px;border-radius:999px;background:#efefef;display:inline-flex;align-items:center;justify-content:center; }
+    .navbar-brand img { height: 32px; }
   </style>
 </head>
 <body>
 
-  <!-- Top -->
+  <!-- Top bar -->
   <div class="topbar border-bottom py-2">
     <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand fw-bold" href="#">株式会社Ruu</a>
-      <div class="tel">TEL: <span class="fs-5">090-2353-8669</span></div>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <!-- ロゴ差し替え -->
+        <img src="ruu-icon.jpg" alt="AY Next">
+        <span class="fw-bold small">株式会社Ruu</span>
+      </a>
+      <div class="tel">
+        TEL: <span class="fs-4">090-2353-8669</span>
+      </div>
     </div>
   </div>
 
@@ -111,27 +126,27 @@
   </section>
 
   <!-- Flow -->
-<section class="container pb-5">
-    <div class="mb-3 fw-bold border-start border-4 ps-2 border-success">採用の流れ</div>
+  <section class="container pb-5">
+    <div class="mb-3 fw-bold border-start border-4 ps-2 border-brand">採用の流れ</div>
   
     <div class="text-center">
       <div class="p-3 mb-2 border rounded bg-white">
         <div class="fw-bold">STEP 1　エントリー</div>
         <p class="small mb-0">応募フォームまたは求人サイトよりご応募ください。</p>
       </div>
-      <div class="my-2 text-success fw-bold">▼</div>
+      <div class="my-2 text-brand fw-bold">▼</div>
   
       <div class="p-3 mb-2 border rounded bg-white">
         <div class="fw-bold">STEP 2　書類選考</div>
         <p class="small mb-0">提出いただいた書類を確認の上、通過者へ次のご案内をいたします。</p>
       </div>
-      <div class="my-2 text-success fw-bold">▼</div>
+      <div class="my-2 text-brand fw-bold">▼</div>
   
       <div class="p-3 mb-2 border rounded bg-white">
         <div class="fw-bold">STEP 3　面接</div>
         <p class="small mb-0">面接日程や会場はご相談の上で決定します。</p>
       </div>
-      <div class="my-2 text-success fw-bold">▼</div>
+      <div class="my-2 text-brand fw-bold">▼</div>
   
       <div class="p-3 border rounded bg-white">
         <div class="fw-bold">STEP 4　内定</div>
@@ -143,7 +158,7 @@
 
   <!-- FAQ -->
   <section class="container pb-4">
-    <div class="mb-3 fw-bold border-start border-4 ps-2 border-success">よくある質問</div>
+    <div class="mb-3 fw-bold border-start border-4 ps-2 border-brand">よくある質問</div>
 
     <div class="row g-3">
       <div class="col-md-6">
@@ -216,7 +231,7 @@
   <!-- CTA -->
   <section class="container pb-5">
     <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
-      <a href="https://docs.google.com/document/d/1KTe__wS8_UTjFnQf2jxXZc5fjx2A9LTQ6fU_iIFqgbE/edit?usp=sharing" class="btn btn-success rounded-pill px-4">
+      <a href="https://docs.google.com/document/d/1KTe__wS8_UTjFnQf2jxXZc5fjx2A9LTQ6fU_iIFqgbE/edit?usp=sharing" class="btn btn-brand rounded-pill px-4">
         応募要項はこちら
       </a>
       <a href="contact.html" class="btn btn-ghost rounded-pill px-4">
