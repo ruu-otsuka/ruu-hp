@@ -22,15 +22,22 @@
     footer{ background:#f6f6f6; }
     .backtop{ width:40px;height:40px;border-radius:999px;background:#efefef;display:inline-flex;align-items:center;justify-content:center; }
     @media (min-width: 992px){ .thumb{ height:220px; } }
+    .navbar-brand img { height: 32px; }
   </style>
 </head>
 <body>
 
-  <!-- Top -->
+  <!-- Top bar -->
   <div class="topbar border-bottom py-2">
     <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand fw-bold" href="#">株式会社Ruu</a>
-      <div class="tel">TEL: <span class="fs-5">090-2353-8669</span></div>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <!-- ロゴ差し替え -->
+        <img src="ruu-icon.jpg" alt="AY Next">
+        <span class="fw-bold small">株式会社Ruu</span>
+      </a>
+      <div class="tel">
+        TEL: <span class="fs-4">090-2353-8669</span>
+      </div>
     </div>
   </div>
 
@@ -109,7 +116,7 @@
       </div>
     </div>
     <div class="col-lg-4">
-      <img src="cleaning-img.jpg" alt="清掃業務" class="thumb">
+      <img src="cleaning-office.jpg" alt="清掃業務" class="thumb">
     </div>
   </div>
 </section>

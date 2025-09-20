@@ -24,18 +24,24 @@
     .table-company th{ width:140px; background:var(--brand-light); font-weight:600; color: white;}
     .footer-mini a{ color:#666; text-decoration:none; }
     .backtop{ width:40px;height:40px;border-radius:999px;background:#efefef;display:inline-flex;align-items:center;justify-content:center; }
+    .navbar-brand img { height: 32px; }
   </style>
 </head>
 <body>
 
-  <!-- ヘッダ -->
+  <!-- Top bar -->
   <div class="topbar border-bottom py-2">
     <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand fw-bold" href="#">株式会社Ruu</a>
-      <div class="tel">TEL: <span class="fs-5">090-2353-8669</span></div>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <!-- ロゴ差し替え -->
+        <img src="ruu-icon.jpg" alt="AY Next">
+        <span class="fw-bold small">株式会社Ruu</span>
+      </a>
+      <div class="tel">
+        TEL: <span class="fs-4">090-2353-8669</span>
+      </div>
     </div>
   </div>
-
   <!-- グローバルナビ -->
   <nav class="border-bottom">
     <div class="container">
