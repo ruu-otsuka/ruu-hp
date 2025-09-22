@@ -230,20 +230,17 @@
       </div>
 
       
-      <main class="container pb-5">
+<main class="container pb-5">
   <div class="heading-bar mb-3">入力フォーム</div>
 
   テストフォーム
 
-  <form
-    action="https://formspree.io/f/manpwbrp"
-    method="POST"
-  >
+  <form action="https://formspree.io/f/manpwbrp" method="POST">
     <!-- 会社名 -->
     <div class="row g-3 align-items-center border p-3 mb-3">
-      <label class="col-md-2 col-form-label">会社名</label>
+      <label for="company" class="col-md-2 col-form-label">会社名</label>
       <div class="col-md-10">
-        <input type="text" class="form-control" name="company">
+        <input type="text" class="form-control" id="company" name="company">
       </div>
     </div>
 
@@ -253,13 +250,13 @@
       <div class="col-md-5">
         <div class="input-group">
           <span class="input-group-text">姓</span>
-          <input type="text" class="form-control" name="lastname">
+          <input type="text" class="form-control" id="lastname" name="lastname">
         </div>
       </div>
       <div class="col-md-5">
         <div class="input-group">
           <span class="input-group-text">名</span>
-          <input type="text" class="form-control" name="firstname">
+          <input type="text" class="form-control" id="firstname" name="firstname">
         </div>
       </div>
     </div>
@@ -270,28 +267,28 @@
       <div class="col-md-5">
         <div class="input-group">
           <span class="input-group-text">セイ</span>
-          <input type="text" class="form-control" name="kana_last">
+          <input type="text" class="form-control" id="kana_last" name="kana_last">
         </div>
       </div>
       <div class="col-md-5">
         <div class="input-group">
           <span class="input-group-text">メイ</span>
-          <input type="text" class="form-control" name="kana_first">
+          <input type="text" class="form-control" id="kana_first" name="kana_first">
         </div>
       </div>
     </div>
 
     <!-- 郵便番号 -->
     <div class="row g-3 align-items-center border p-3 mb-3">
-      <label class="col-md-2 col-form-label">郵便番号 <span class="text-danger">※</span></label>
+      <label class="col-md-2 col-form-label" for="zip_first">郵便番号 <span class="text-danger">※</span></label>
       <div class="col-md-10">
         <div class="row g-2">
           <div class="col-5 col-sm-3 col-md-2">
-            <input type="text" class="form-control" name="zip_first" placeholder="123">
+            <input type="text" class="form-control" id="zip_first" name="zip_first" placeholder="123">
           </div>
           <div class="col-1 text-center d-none d-sm-block">-</div>
           <div class="col-5 col-sm-3 col-md-2">
-            <input type="text" class="form-control" name="zip_last" placeholder="4567">
+            <input type="text" class="form-control" id="zip_last" name="zip_last" placeholder="4567">
           </div>
         </div>
       </div>
@@ -299,34 +296,34 @@
 
     <!-- 住所 -->
     <div class="row g-3 align-items-start border p-3 mb-3">
-      <label class="col-md-2 col-form-label">住所 <span class="text-danger">※</span></label>
+      <label class="col-md-2 col-form-label" for="prefecture">住所 <span class="text-danger">※</span></label>
       <div class="col-md-10">
         <div class="row g-2 mb-2">
           <div class="col-sm-4">
-            <select class="form-select" name="prefecture">
+            <select class="form-select" id="prefecture" name="prefecture">
               <option value="">選択してください</option>
               <option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option>
             </select>
           </div>
         </div>
-        <input type="text" class="form-control mb-2" name="city" placeholder="市区町村・番地">
-        <input type="text" class="form-control" name="building" placeholder="建物名・部屋番号（任意）">
+        <input type="text" class="form-control mb-2" id="city" name="city" placeholder="市区町村・番地">
+        <input type="text" class="form-control" id="building" name="building" placeholder="建物名・部屋番号（任意）">
       </div>
     </div>
 
     <!-- 電話番号 -->
     <div class="row g-3 align-items-center border p-3 mb-3">
-      <label class="col-md-2 col-form-label">電話番号 <span class="text-danger">※</span></label>
+      <label class="col-md-2 col-form-label" for="tel1">電話番号 <span class="text-danger">※</span></label>
       <div class="col-md-10">
         <div class="row g-2">
           <div class="col-4 col-sm-3 col-md-2">
-            <input type="text" class="form-control" name="tel1">
+            <input type="text" class="form-control" id="tel1" name="tel1">
           </div>
           <div class="col-4 col-sm-3 col-md-2">
-            <input type="text" class="form-control" name="tel2">
+            <input type="text" class="form-control" id="tel2" name="tel2">
           </div>
           <div class="col-4 col-sm-3 col-md-2">
-            <input type="text" class="form-control" name="tel3">
+            <input type="text" class="form-control" id="tel3" name="tel3">
           </div>
         </div>
       </div>
@@ -334,46 +331,46 @@
 
     <!-- メール -->
     <div class="row g-3 align-items-center border p-3 mb-3">
-      <label class="col-md-2 col-form-label">メールアドレス <span class="text-danger">※</span></label>
+      <label class="col-md-2 col-form-label" for="email">メールアドレス <span class="text-danger">※</span></label>
       <div class="col-md-10">
-        <input type="email" class="form-control mb-2" name="email" placeholder="example@example.com">
-        <input type="email" class="form-control" name="email_confirm" placeholder="（確認用）">
+        <input type="email" class="form-control mb-2" id="email" name="email" placeholder="example@example.com">
+        <input type="email" class="form-control" id="email_confirm" name="email_confirm" placeholder="（確認用）">
       </div>
     </div>
 
     <!-- お問合せ内容 -->
     <div class="row g-3 align-items-start border p-3 mb-3">
-      <label class="col-md-2 col-form-label">お問合せ内容 <span class="text-danger">※</span></label>
+      <label class="col-md-2 col-form-label" for="message">お問合せ内容 <span class="text-danger">※</span></label>
       <div class="col-md-10">
-        <textarea class="form-control" rows="6" name="message"></textarea>
+        <textarea class="form-control" id="message" name="message" rows="6"></textarea>
       </div>
     </div>
 
+    <!-- 個人情報の取り扱い -->
+    <div class="heading-bar mb-2">個人情報の取り扱いについて</div>
+    <div class="policy-box p-3 mb-3 small text-muted">
+      <ol class="mb-2">
+        <li class="mb-2"><strong>個人情報の定義</strong><br>個人情報とは、氏名・住所・電話番号・メールアドレス等、個人が識別できるものを指します。</li>
+        <li><strong>利用目的</strong><br>お問合せ対応、本人確認、サービス案内等に利用します。</li>
+      </ol>
+    </div>
 
-      <!-- 個人情報の取り扱い -->
-      <div class="heading-bar mb-2">個人情報の取り扱いについて</div>
-      <div class="policy-box p-3 mb-3 small text-muted">
-        <ol class="mb-2">
-          <li class="mb-2"><strong>個人情報の定義</strong><br>個人情報とは、氏名・住所・電話番号・メールアドレス等、個人が識別できるものを指します。</li>
-          <li><strong>利用目的</strong><br>お問合せ対応、本人確認、サービス案内等に利用します。</li>
-        </ol>
-      </div>
+    <!-- 同意 -->
+    <div class="form-check mb-4">
+      <input class="form-check-input" type="checkbox" id="agree" name="agree">
+      <label class="form-check-label" for="agree">同意する</label>
+    </div>
 
-      <!-- 同意 -->
-      <div class="form-check mb-4">
-        <input class="form-check-input" type="checkbox" id="agree">
-        <label class="form-check-label" for="agree">同意する</label>
-      </div>
+    <!-- reCAPTCHAダミー -->
+    <div class="recaptcha-box mb-4">reCAPTCHA（ダミー）</div>
 
-      <!-- reCAPTCHAダミー -->
-      <div class="recaptcha-box mb-4">reCAPTCHA（ダミー）</div>
+    <!-- 送信ボタン -->
+    <div class="text-center">
+      <button class="btn btn-brand btn-lg px-4" type="submit">入力内容を確認</button>
+    </div>
+  </form>
+</main>
 
-      <!-- 送信ボタン -->
-      <div class="text-center">
-        <button class="btn btn-brand btn-lg px-4" type="submit">入力内容を確認</button>
-      </div>
-    </form>
-  </main>
 
   <!-- Footer -->
   <footer class="pt-4 pb-5">
